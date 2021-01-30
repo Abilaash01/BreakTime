@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel = "stylesheet" href = "static\styles.css"> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
+    <link rel = "stylesheet" href = "static\styles.css">
+    <script src="myscript.js"></script>
+</head>
+    <body style="background: white;">
+        <div class = "header">
+            <h1>Break Time!</h1>
+        </div>
+        <p>
+            <!-- We are using node <script>document.write(process.versions.node)</script>,
+            Chrome <script>document.write(process.versions.chrome)</script>,
+            and Electron <script>document.write(process.versions.electron)</script>. -->
+
+            <div>
+                <form id="para1">
+              
+                    <label for="minsInterval">Select the interval for BreakTime :</label>
+                    <input type="number" id="minsInterval" name="minsInterval" value = "0" min="5" max="240"><br>
+                    <label for="minsBreak">Select the amount of minutes for some peace :</label>
+                    <input type="number" id="minsBreak" name="minsBreak" value = "0"min="1" max="60"><br>
+                    
+                </form>
+            </div>
+            
+            <p id = "check"> test</p>
+            <p2 id = "check2"> number1</p2>
+            <div class = "button"> 
+                <button type="button" id = "submit">Submit</button>
+            </div>
+            
+            <script>
+                function fn1()
+                {
+                    var mI = document.getElementById("minsInterval").value;
+                    document.getElementById("check2").innerHTML = mI;
+                    var hI = document.getElementById("minsBreak").value
+                }
+
+                document.getElementById("submit").addEventListener("click",fn1);
+              
+
+  
+                //var element = document.getElementById("minsInterval").value;
+                //var element2 = document.getElementById("minsBreak").value;
+
+                //document.getElementById("submit").addEventListener("click", function() {
+                //document.getElementById("check2").innerHTML = element.value;
+                //})
+                
+            </script>
+
+        </p>
+    </body>
+
+</html>
