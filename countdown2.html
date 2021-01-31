@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
     <link rel = "stylesheet" href = "static\count.css">
 
 </head>
@@ -16,20 +17,7 @@
       </div>
 
     <button type="button" id = "back">Back</button>
-   <script> 
-//    const { Notification } = require('electron')
-
-//     function showNotification () {
-//     const notification = {
-//     title: 'Breaktime',
-//     body: 'Notification from the Main process'
-//      }
-//     new Notification(notification).show()
-//     }
-
-// app.whenReady().then(showNotification)
-
-// Set the date we're counting down to
+   <script>
 
     var element = localStorage.getItem("interval");
     var element = localStorage.getItem("interval");
@@ -85,7 +73,6 @@
       } else {
         Notification.requestPermission().then(function (p) {
           if (p === 'granted') {
-            // show notification here
             var notify = new Notification('Hi there!', {
               body: msg,
               icon: 'logo.png',

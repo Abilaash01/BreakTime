@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Break Time</title>
-    <!-- <link rel = "stylesheet" href = "static\styles.css"> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
     <link rel = "stylesheet" href = "static\styles.css">
-    <!-- <script src="renderer.js"></script> -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
     <body style="background: white;">
@@ -16,10 +13,6 @@
             <h1>Break Time!</h1>
         </div>
         <p>
-            <!-- We are using node <script>document.write(process.versions.node)</script>,
-            Chrome <script>document.write(process.versions.chrome)</script>,
-            and Electron <script>document.write(process.versions.electron)</script>. -->
-
             <div>
                 <form id="para1">
               
@@ -30,9 +23,6 @@
                     
                 </form>
             </div>
-            
-            <!-- <p id = "check"> test</p>
-            <p2 id = "check2"> number1</p2> -->
 
             <div class = "button"> 
                 <button onclick="myFunc()" id = "submit">Submit</button>
@@ -64,41 +54,10 @@
                     localStorage.setItem("breakInterval", breakTimer);
                     window.location.replace("countdown.html");
                 }
-                // function fn1()
-                // {
-                //     var mI = document.getElementById("minsInterval").value;
-                //     document.getElementById("check2").innerHTML = mI;
-                //     var hI = document.getElementById("minsBreak").value
-                // }
 
                 window.onload = function() {
                     localStorage.setItem("interval",mI);
-                }
-
-                // submit.addEventListener('click', function() {
-                // // const title = 'Simple Title';
-                // // const options = {
-                // // body: 'Simple piece of body text.\nSecond line of body text :)'
-                // // };
-                // swRegistration.showNotification(title, options);
-              
-
-  
-                //var element = document.getElementById("minsInterval").value;
-                //var element2 = document.getElementById("minsBreak").value;
-
-                //document.getElementById("submit").addEventListener("click", function() {
-                //document.getElementById("check2").innerHTML = element.value;
-                //})
-                // notification = new Notification({title: "Message Received",body: "message body"})
-
-                // notification.show()
-
-                //     notification.on('click', (event, arg)=>{
-                //     console.log("clicked")
-                //     })
-
-                // notification.show();            
+                }           
                 
             </script>
 
