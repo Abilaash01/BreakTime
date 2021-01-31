@@ -9,8 +9,18 @@ body{
     color: white;
     font-size: 30px;
 }
+
 button{
     background:#1abc9c;
+    color: white;
+}
+
+.button {
+    transition-duration: 0.4s;
+}
+  
+.button:hover {
+    background: #4CAF50; /* Green */
     color: white;
 }
 
@@ -22,3 +32,4 @@ form {
     display: inline-block;
     
 }
+
