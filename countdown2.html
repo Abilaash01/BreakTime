@@ -65,14 +65,14 @@
       console.log('Browser does not support notifications.');
     } else {
       if (Notification.permission === 'granted') {
-        var notify = new Notification('Hi there!', {
+        var notify = new Notification('BreakTime', {
           body: msg,
           icon: 'logo.png',
         });
       } else {
         Notification.requestPermission().then(function (p) {
           if (p === 'granted') {
-            var notify = new Notification('Hi there!', {
+            var notify = new Notification('BreakTime', {
               body: msg,
               icon: 'logo.png',
             });
