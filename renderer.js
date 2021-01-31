@@ -5,3 +5,4 @@ const myNotification = new Notification('Title', {
   myNotification.onclick = () => {
     console.log('Notification clicked')
   }
+  

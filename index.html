@@ -8,7 +8,8 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
     <link rel = "stylesheet" href = "static\styles.css">
-    <script src="myscript.js"></script>
+    <!-- <script src="renderer.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
     <body style="background: white;">
         <div class = "header">
@@ -22,24 +23,30 @@
             <div>
                 <form id="para1">
               
-                    <label for="minsInterval">Select the interval for BreakTime :</label>
+                    <label for="minsInterval">Select the interval for BreakTime :</label><br>
                     <input type="number" id="minsInterval" name="minsInterval" value = "0" min="5" max="240" onkeydown="preventKeyboardInput(event)"><br>
-                    <label for="minsBreak">Select the amount of minutes for some peace :</label>
+                    <label for="minsBreak">Select the amount of minutes for some peace :</label><br>
                     <input type="number" id="minsBreak" name="minsBreak" value = "0"min="1" max="60" onkeydown="preventKeyboardInput(event)"><br>
                     
                 </form>
             </div>
             
-            <p id = "check"> test</p>
-            <p2 id = "check2"> number1</p2>
+            <!-- <p id = "check"> test</p>
+            <p2 id = "check2"> number1</p2> -->
+
             <div class = "button"> 
-                <button type="button" id = "submit">Submit</button>
+                <button onclick="myFunc()" id = "submit">Submit</button>
             </div>
             
             <script>
                 function preventKeyboardInput(event) {
                     event.preventDefault();
                 }
+
+                function myFunc(){
+                    swal("Good job!", "You clicked the button!", "success");
+                }
+                
                 var mI = document.getElementById("minsInterval").value;
                 var hI = document.getElementById("minsBreak").value
                 // function fn1()
@@ -56,6 +63,13 @@
                 submit.onclick = function() {
                 window.location.replace("countdown.html");
                 }
+
+                // submit.addEventListener('click', function() {
+                // // const title = 'Simple Title';
+                // // const options = {
+                // // body: 'Simple piece of body text.\nSecond line of body text :)'
+                // // };
+                // swRegistration.showNotification(title, options);
               
 
   
@@ -65,10 +79,18 @@
                 //document.getElementById("submit").addEventListener("click", function() {
                 //document.getElementById("check2").innerHTML = element.value;
                 //})
+                // notification = new Notification({title: "Message Received",body: "message body"})
+
+                // notification.show()
+
+                //     notification.on('click', (event, arg)=>{
+                //     console.log("clicked")
+                //     })
+
+                // notification.show();            
                 
             </script>
 
         </p>
     </body>
-
 </html>
