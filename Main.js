@@ -33,7 +33,7 @@ const { Notification } = require('electron')
 function showNotification () {
   const notification = {
     title: 'Breaktime',
-    body: 'Notification from the Main process'
+    body: 'Time For Your Break!'
   }
   new Notification(notification).show()
 }
