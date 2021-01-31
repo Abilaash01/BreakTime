@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
     <link rel = "stylesheet" href = "static\count.css">
 
 </head>
 <body>
+  <body>
     <p id="demo"></p>
+  </body>
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         <strong>The countdown will start now!</strong>
       </div>
 
     <button type="button" id = "back">Back</button>
-   <script> 
+   <script>
 
   var element = localStorage.getItem("interval");
   var element = localStorage.getItem("interval");
@@ -74,6 +75,7 @@
       } else {
         Notification.requestPermission().then(function (p) {
           if (p === 'granted') {
+            // show notification here
             var notify = new Notification('Hi there!', {
               body: msg,
               icon: 'logo.png',

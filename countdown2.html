@@ -7,17 +7,34 @@
 
     <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
     <link rel = "stylesheet" href = "static\count.css">
+	 <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
 
 </head>
 <body>
     <p id="demo"></p>
     <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <strong>Break time counter starts now!</strong>
       </div>
 
     <button type="button" id = "back">Back</button>
    <script>
+<<<<<<< HEAD
+=======
+//    const { Notification } = require('electron')
+
+//     function showNotification () {
+//     const notification = {
+//     title: 'Breaktime',
+//     body: 'Notification from the Main process'
+//      }
+//     new Notification(notification).show()
+//     }
+
+// app.whenReady().then(showNotification)
+
+// Set the date we're counting down to
+>>>>>>> a1b4787e8ecdb7aa63b946bc6c8d09d7d18d93ae
 
     var element = localStorage.getItem("interval");
     var element = localStorage.getItem("interval");
@@ -33,7 +50,7 @@
         var hours = Math.floor(breakInts / 3600);
         var minutes = Math.floor(((breakInts - hours * 3600) / 60));
         var seconds = Math.floor(breakInts - (hours * 3600) - (minutes * 60));
-        
+
         if(hours == 0) {
             notifyMe('Time for your break. You have ' + minutes + "min " + 'until you can work again.');
         } else {
