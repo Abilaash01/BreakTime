@@ -1,24 +1,33 @@
 body{
-    color: blue;
+    color:#1abc9c;
     text-align: center;
+    
+    
+    
 }
 .header{
     text-align: center;
-    padding: 60px;
-    background: #1abc9c;
+    padding: 10px;
+    background: #62efcd;
     color: white;
     font-size: 30px;
 }
 button{
     background:#1abc9c;
     color: white;
+    
 }
 
 input{
+    margin-bottom: 25px;
     text-align: center;
+
 }
 
 form {
     display: inline-block;
+    text-align: center;
+    
+
     
 }
