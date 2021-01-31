@@ -1,11 +1,13 @@
 body{
     text-align: center;
+    font-size: 50px;
 }
 
 .alert {
     padding: 20px;
-    background-color: #f19165;
+    background-color: #1abc9c;
     color: white;
+    margin-bottom: 25px;
   }
   
   .closebtn {
@@ -23,7 +25,19 @@ body{
     color: black;
   }
 
-button{
+  button{
+    font-size: 25px;
+    border: none;
+    border-radius: 15px;
+    padding: 50px;
     background:#1abc9c;
     color: white;
- }
+    
+}
+
+button:hover {
+    border: none;
+    border-radius: 15px;
+    background-color: #62efcd;
+    color: white;
+}
