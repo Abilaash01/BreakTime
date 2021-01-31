@@ -40,15 +40,22 @@
                 function preventKeyboardInput(event) {
                     event.preventDefault();
                 }
+                var mI = document.getElementById("minsInterval").value;
+                var hI = document.getElementById("minsBreak").value
+                // function fn1()
+                // {
+                //     var mI = document.getElementById("minsInterval").value;
+                //     document.getElementById("check2").innerHTML = mI;
+                //     var hI = document.getElementById("minsBreak").value
+                // }
 
-                function fn1()
-                {
-                    var mI = document.getElementById("minsInterval").value;
-                    document.getElementById("check2").innerHTML = mI;
-                    var hI = document.getElementById("minsBreak").value
+                window.onload = function() {
+                localStorage.setItem("interval",mI);
                 }
 
-                document.getElementById("submit").addEventListener("click",fn1);
+                submit.onclick = function() {
+                window.location.replace("countdown.html");
+                }
               
 
   
