@@ -10,18 +10,18 @@ https://nodejs.org/en/download/
 
 or to verify its version type this command 
 
-node -v
+  node -v
 
 Copy paste this link on google and download the appropriate files for the specific operating system.
 
 To install electron js in the project file use this command in the terminal.
 
-npm install electron
+  npm install electron
 
 This should add all the necessary files to run the app.
 
 To start the app from the terminal use this command.
 
-npm start
+  npm start
 
 The electron should be up and running for use. 
