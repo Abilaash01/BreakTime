@@ -32,8 +32,9 @@ const { Notification } = require('electron')
 
 function showNotification () {
   const notification = {
+    icon: 'logo.png',
     title: 'Breaktime',
-    body: 'Notification from the Main process'
+    body: 'Is currently running'
   }
   new Notification(notification).show()
 }

@@ -12,7 +12,7 @@
     <p id="demo"></p>
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        <strong>The countdown will start now!</strong>
+        <strong>Break time counter starts now!</strong>
       </div>
 
     <button type="button" id = "back">Back</button>
@@ -31,50 +31,49 @@
 
 // Set the date we're counting down to
 
-  var element = localStorage.getItem("interval");
-  var element = localStorage.getItem("interval");
-  var timerInt = localStorage.getItem("timerInterval");
-  var myTimer;
+    var element = localStorage.getItem("interval");
+    var element = localStorage.getItem("interval");
+    var breakInts = localStorage.getItem("breakInterval");
+    var myTimer;
 
-  back.onclick = function() {
-    window.location.replace("index.html");
-  }
-
-  window.onload = (event) => {
-    clock(timerInt);
-  };
-
-  function clock(counter) {
-    myTimer = setInterval(myClock, 1000);
-    var c = counter;
-
-    var h = Math.floor(timerInt / 3600);
-    var m = Math.floor(((timerInt - h * 3600) / 60));
-    var s = Math.floor(timerInt - (h * 3600) - (m * 60));
-    
-    if(h == 0) {
-      notifyMe('You have ' + m + "min " + 'until your break.');
-    } else {
-      notifyMe('You have ' + h + "hrs " + m + "min " + 'until your break.');
+    back.onclick = function() {
+      window.location.replace("index.html");
     }
 
-    function myClock() {
-      var hours = Math.floor(c / 3600);
-      var minutes = Math.floor(((c - hours * 3600) / 60));
-      var seconds = Math.floor(c - (hours * 3600) - (minutes * 60));
+    window.onload = (event) => {
+        clock(breakInts);
+        var hours = Math.floor(breakInts / 3600);
+        var minutes = Math.floor(((breakInts - hours * 3600) / 60));
+        var seconds = Math.floor(breakInts - (hours * 3600) - (minutes * 60));
+        
+        if(hours == 0) {
+            notifyMe('Time for your break. You have ' + minutes + "min " + 'until you can work again.');
+        } else {
+            notifyMe('Time for your break. You have ' + hours + "hrs " + minutes + "min " + 'until you can work again.');
+        }
+    };
 
-      document.getElementById("demo").innerHTML = hours + "h " + minutes + "m " + seconds + "s";
+    function clock(counter) {
+      myTimer = setInterval(myClock, 1000);
+      var c = counter;
 
-      if (c <= 0) {
-        clearInterval(myTimer);
-        window.location.replace("countdown2.html");
+      function myClock() {
+        var hours = Math.floor(c / 3600);
+        var minutes = Math.floor(((c - hours * 3600) / 60));
+        var seconds = Math.floor(c - (hours * 3600) - (minutes * 60));
+
+        document.getElementById("demo").innerHTML = hours + "h " + minutes + "m " + seconds + "s"
+
+        if (c == 0) {
+          clearInterval(myTimer);
+          window.location.replace("countDown.html");
+        }
+
+        c--;
       }
-
-      c--;
     }
-  }
 
-  function notifyMe(msg) {
+    function notifyMe(msg) {
     if (!window.Notification) {
       console.log('Browser does not support notifications.');
     } else {

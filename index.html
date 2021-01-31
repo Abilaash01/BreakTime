@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Break Time</title>
     <!-- <link rel = "stylesheet" href = "static\styles.css"> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
@@ -39,6 +39,10 @@
             </div>
             
             <script>
+                var mI;
+                var hI;
+                var countDownDate;
+
                 function preventKeyboardInput(event) {
                     event.preventDefault();
                 }
@@ -46,9 +50,20 @@
                 function myFunc(){
                     swal("Good job!", "You clicked the button!", "success");
                 }
-                
-                var mI = document.getElementById("minsInterval").value;
-                var hI = document.getElementById("minsBreak").value
+
+                submit.onclick = function() {
+                    mI = document.getElementById("minsInterval").value;
+                    hI = document.getElementById("minsBreak").value;
+                    countDownDate = mI * 60;
+                    breakTimer = hI * 60;
+                    myFunction();
+                }
+
+                function myFunction() {
+                    localStorage.setItem("timerInterval", countDownDate);
+                    localStorage.setItem("breakInterval", breakTimer);
+                    window.location.replace("countdown.html");
+                }
                 // function fn1()
                 // {
                 //     var mI = document.getElementById("minsInterval").value;
@@ -57,11 +72,7 @@
                 // }
 
                 window.onload = function() {
-                localStorage.setItem("interval",mI);
-                }
-
-                submit.onclick = function() {
-                window.location.replace("countdown.html");
+                    localStorage.setItem("interval",mI);
                 }
 
                 // submit.addEventListener('click', function() {
