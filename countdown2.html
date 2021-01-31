@@ -6,17 +6,18 @@
     <title>Document</title>
 
     <link rel = "stylesheet" href = "static\count.css">
+	 <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
 
 </head>
 <body>
     <p id="demo"></p>
     <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <strong>Break time counter starts now!</strong>
       </div>
 
     <button type="button" id = "back">Back</button>
-   <script> 
+   <script>
 //    const { Notification } = require('electron')
 
 //     function showNotification () {
@@ -45,7 +46,7 @@
         var hours = Math.floor(breakInts / 3600);
         var minutes = Math.floor(((breakInts - hours * 3600) / 60));
         var seconds = Math.floor(breakInts - (hours * 3600) - (minutes * 60));
-        
+
         if(hours == 0) {
             notifyMe('Time for your break. You have ' + minutes + "min " + 'until you can work again.');
         } else {

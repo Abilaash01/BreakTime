@@ -6,17 +6,18 @@
     <title>Document</title>
 
     <link rel = "stylesheet" href = "static\count.css">
+	 <link rel = "stylesheet" href = "static\bootstrap-4.3.1\dist\css\bootstrap.min.css">
 
 </head>
 <body>
     <p id="demo"></p>
     <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <strong>The countdown will start now!</strong>
       </div>
 
     <button type="button" id = "back">Back</button>
-   <script> 
+   <script>
 //    const { Notification } = require('electron')
 
 //     function showNotification () {
@@ -51,7 +52,7 @@
     var h = Math.floor(timerInt / 3600);
     var m = Math.floor(((timerInt - h * 3600) / 60));
     var s = Math.floor(timerInt - (h * 3600) - (m * 60));
-    
+
     if(h == 0) {
       notifyMe('You have ' + m + "min " + 'until your break.');
     } else {
